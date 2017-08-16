@@ -1,0 +1,29 @@
+<h1>Liste des utilisateurs</h1>
+<table border="1">
+  <tr>
+    <td>IHM Index</td>
+    <td>ID</td>
+    <td>Nom</td>
+    <td>Login</td>
+    <td>Mot de passe</td>
+    <td>email</td>
+    <td>Téléphone</td>
+    <td>Statut</td>
+    <td>Dernière connexion</td>
+    <td>Date de création</td>
+    <td>Date de mise à jour</td>
+  </tr>
+  <tr *ngFor="let user of users; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{user.id}}</td>
+    <td>{{user.firstName}}&nbsp;{{user.lastName}}</td>
+    <td>{{user.login}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.mobilePhone}}</td>
+    <td>{{user.status}}</td>
+    <td>{{user.lastConnection}}</td>
+    <td>{{user.createDate}}</td>
+    <td>{{user.lastUpdateDate}}</td>
+  </tr>
+</table>

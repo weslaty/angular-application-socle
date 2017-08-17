@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DataService } from '../../services/data.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -11,18 +11,18 @@ export class UserComponent implements OnInit {
 
   users: User[];
 
-  constructor(private dataService: DataService) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
 
-    this.dataService.getUsers().subscribe((users) => {
+    this.userService.getUsers().subscribe((users) => {
       /*console.log(users);*/
       this.users = users;
     });
   }
 
 }
-interface User{
+interface User {
   id: number;
   password: string;
   login: string;

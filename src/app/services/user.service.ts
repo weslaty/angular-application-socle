@@ -3,10 +3,9 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class DataService {
-
+export class UserService {
   constructor(public http: Http) {
-    console.log('DataService connected ....');
+    console.log('UserService connected ....');
   }
 
   getUsers() {

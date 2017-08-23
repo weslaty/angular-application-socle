@@ -1,0 +1,51 @@
+<table border="1" *ngIf="user" >
+
+  <tr>
+    <td><label>ID</label></td>
+    <td>{{user.id}}</td>
+
+  <tr>
+     <td><label>Prenom</label></td>
+     <td><input [(ngModel)]="user.firstName" placeholder="Prenom"></td>
+   </tr>
+  <tr>
+    <td><label>Nom</label></td>
+    <td><input [(ngModel)]="user.lastName" placeholder="Nom"></td>
+  </tr>
+  <tr>
+     <td><label>Login</label></td>
+     <td><input [(ngModel)]="user.login" placeholder="login"></td>
+   </tr>
+   <tr>
+     <td><label>Mot de passe</label></td>
+     <td><input [(ngModel)]="user.password" placeholder="Mode de passe"></td>
+   </tr>
+   <tr>
+     <td><label>email</label></td>
+     <td><input [(ngModel)]="user.email" placeholder="email"></td>
+   </tr>
+   <tr>
+     <td><label>Téléphone</label></td>
+     <td><input [(ngModel)]="user.mobilePhone" placeholder="Téléphone"></td>
+   </tr>
+   <tr>
+     <td><label>Statut</label></td>
+     <td><input [(ngModel)]="user.status" placeholder="Statut"></td>
+   </tr>
+   <tr>
+     <td><label>Date de création</label></td>
+     <td><input [(ngModel)]="user.createDate" placeholder="Date de création"></td>
+   </tr>
+   <tr>
+     <td><label>Date de mise à jour</label></td>
+     <td><input [(ngModel)]="user.lastUpdateDate" placeholder="Date de mise à jour"></td>
+   </tr>
+   <tr>
+     <td><label>Dernière connexion</label></td>
+     <td><input [(ngModel)]="user.lastConnection" placeholder="Dernière connexion"></td>
+   </tr>
+</table>
+<div *ngIf="! user">User not exist</div>
+<button (click)="save()">Save</button>
+
+

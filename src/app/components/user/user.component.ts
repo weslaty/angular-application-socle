@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 import { UserService } from '../../services/user.service';
+import { UserEditComponent } from '../user-edit/user-edit.component';
+
+const routes: Routes = [
+  { path: 'edit', component: UserEditComponent },
+];
 
 @Component({
   selector: 'app-user',
@@ -22,7 +28,7 @@ export class UserComponent implements OnInit {
   }
 
 }
-interface User {
+export interface User {
   id: number;
   password: string;
   login: string;

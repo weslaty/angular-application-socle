@@ -292,19 +292,6 @@ export const PAGES_MENU = [
               },
             },
           },
-          {
-            path: ['/prime-ng-samples'],
-            data: {
-              menu: {
-                title: 'New Page prime-ng-samples', // menu title
-                icon: 'ion-android-home', // menu icon
-                pathMatch: 'prefix', // use it if item children not displayed in menu
-                selected: false,
-                expanded: false,
-                order: 0
-              },
-            },
-          },
         ],
       },
       {

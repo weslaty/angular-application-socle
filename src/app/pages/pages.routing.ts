@@ -27,7 +27,6 @@ export const routes: Routes = [
       { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
       { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
       { path: 'maps', loadChildren: './maps/maps.module#MapsModule' },
-      { path: 'prime-ng-samples', loadChildren: './prime-ng-samples/prime-ng-samples.module#PrimeNgSamplesModule' },
     ],
   },
 ];

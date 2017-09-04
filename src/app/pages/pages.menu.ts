@@ -265,6 +265,28 @@ export const PAGES_MENU = [
         ],
       },
       {
+        path: 'primeng',
+        data: {
+          menu: {
+            title: 'general.menu.primeng',
+            icon: 'ion-ios-briefcase-outline',
+            selected: false,
+            expanded: false,
+            order: 300,
+          },
+        },
+        children: [
+          {
+            path: 'sample1',
+            data: {
+              menu: {
+                title: 'general.menu.sample1',
+              },
+            },
+          },
+        ],
+      },
+      {
         path: '',
         data: {
           menu: {

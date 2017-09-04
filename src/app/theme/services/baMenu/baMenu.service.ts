@@ -27,11 +27,11 @@ export class BaMenuService {
     return this._skipEmpty(items);
   }
 
-  public getCurrentItem():any {
+  public getCurrentItem(): any {
     return this._currentMenuItem;
   }
 
-  public selectMenuItem(menuItems:any[]):any[] {
+  public selectMenuItem(menuItems: any[]): any[] {
     let items = [];
     menuItems.forEach((item) => {
       this._selectItem(item);
@@ -68,7 +68,7 @@ export class BaMenuService {
     return [].concat.apply([], menu);
   }
 
-  protected _convertArrayToItems(routes:any[], parent?:any):any[] {
+  protected _convertArrayToItems(routes: any[], parent?: any): any[] {
     let items = [];
     routes.forEach((route) => {
       items.push(this._convertObjectToItem(route, parent));
@@ -93,7 +93,9 @@ export class BaMenuService {
       item.route.paths = item.route.path;
     } else {
       item.route.paths = parent && parent.route && parent.route.paths ? parent.route.paths.slice(0) : ['/'];
-      if (!!item.route.path) item.route.paths.push(item.route.path);
+      if (!!item.route.path) {
+        item.route.paths.push(item.route.path);
+      }
     }
 
     if (object.children && object.children.length > 0) {
@@ -110,7 +112,7 @@ export class BaMenuService {
     return prepared;
   }
 
-  protected _prepareItem(object:any):any {
+  protected _prepareItem(object: any): any {
     if (!object.skip) {
       object.target = object.target || '';
       object.pathMatch = object.pathMatch  || 'full';
@@ -120,8 +122,11 @@ export class BaMenuService {
     return object;
   }
 
-  protected _selectItem(object:any):any {
-    object.selected = this._router.isActive(this._router.createUrlTree(object.route.paths), object.pathMatch === 'full');
+  protected _selectItem(object: any): any {
+    object.selected = this._router.isActive(
+      this._router.createUrlTree(object.route.paths),
+      object.pathMatch === 'full'
+    );
     return object;
   }
 }

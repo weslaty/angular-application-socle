@@ -1,15 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {BubbleMapsService} from './bubbleMaps.service';
+import { BubbleMapsService } from './bubbleMaps.service';
 
 @Component({
   selector: 'bubble-maps',
   templateUrl: './bubbleMaps.html',
-  styleUrls: ['./bubbleMaps.scss']
+  styleUrls: ['./bubbleMaps.scss'],
 })
 export class BubbleMaps {
 
-  chartData:Object;
+  chartData: Object;
 
   constructor(private _bubbleMapsService:BubbleMapsService) {
   }
